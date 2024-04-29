@@ -125,7 +125,7 @@ void task_ntc_voltage(void)
         filter_voltage_err++;
         if(filter_voltage_err > 10)
         {
-          //  sys_arg.voltage_err = 1;
+           sys_arg.voltage_err = 1;
         }
     }
     else

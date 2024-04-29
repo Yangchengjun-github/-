@@ -29,20 +29,20 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0100h     0102h    0003h      CODE               @crom (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
      0103h     01bch    00bah      CODE               _task_buzzer (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
      01bdh     01dbh    001fh      CODE               _adc_conversion (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
-     01dch     021bh    0040h      CODE               _task_ntc_voltage (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
-     021ch     0228h    000dh      CODE               _task_run (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
-     0229h     024ah    0022h      CODE               _TB0_ISR (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
-     024bh     035bh    0111h      CODE               _task_app (c:\users\yang\desktop\zxw\l4310\code\APP.OBJ)
-     035ch     0362h    0007h      CODE               _key_init (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
-     0363h     047ch    011ah      CODE               _task_key (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
-     047dh     0489h    000dh      CODE               _led_init (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
-     048ah     05e0h    0157h      CODE               _task_led (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
-     05e1h     05eah    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     05ebh     0611h    0027h      CODE               _memset (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_srsc.lib)
-     0612h     0618h    0007h      CODE               _CROM2PROM (CROM2PROM)
-     0080h     00d4h    0055h      DATA     2.2       @HCCINIT (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     01dch     0224h    0049h      CODE               _task_ntc_voltage (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     0225h     0231h    000dh      CODE               _task_run (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     0232h     0253h    0022h      CODE               _TB0_ISR (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     0254h     0364h    0111h      CODE               _task_app (c:\users\yang\desktop\zxw\l4310\code\APP.OBJ)
+     0365h     036bh    0007h      CODE               _key_init (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
+     036ch     0485h    011ah      CODE               _task_key (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
+     0486h     0492h    000dh      CODE               _led_init (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
+     0493h     05e9h    0157h      CODE               _task_led (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
+     05eah     05f3h    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     05f4h     061ah    0027h      CODE               _memset (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_srsc.lib)
+     061bh     0621h    0007h      CODE               _CROM2PROM (CROM2PROM)
+     0080h     00d4h    0055h      DATA     2.2118    @HCCINIT (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
      00d5h     00dfh    000bh      DATA     0         @HCCINIT0 (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
-     00e0h     00e0h    0001h      DATA     43        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e0h     00e0h    0001h      DATA     46        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00e1h     00e1h    0001h      DATA     91        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00e2h     00e2h    0001h      DATA     79        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00e3h     00e3h    0001h      DATA     80        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
@@ -82,17 +82,17 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
 
      Public Symbols Information
      Address            Public by Name
-     0613h              _Crom2Prom
-     0612h              _Crom2PromNext
-     0229h              _TB0_ISR
+     061ch              _Crom2Prom
+     061bh              _Crom2PromNext
+     0232h              _TB0_ISR
      00a7h              _UART_SoftWareSendByte
-     05e7h              __DELAYX0
-     05e6h              __DELAYX1
-     05e5h              __DELAYX2
-     05e4h              __DELAYX3
-     05e3h              __DELAYX4
-     05e2h              __DELAYX5
-     05e1h              __DELAYX6
+     05f0h              __DELAYX0
+     05efh              __DELAYX1
+     05eeh              __DELAYX2
+     05edh              __DELAYX3
+     05ech              __DELAYX4
+     05ebh              __DELAYX5
+     05eah              __DELAYX6
      01bdh              _adc_conversion
      00d8h              _adc_init
      00cdh              _breath_CB
@@ -102,10 +102,10 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      00b9h              _cnt_10ms
      00bah              _cnt_1ms
      00bbh              _key_cb
-     035ch              _key_init
-     047dh              _led_init
+     0365h              _key_init
+     0486h              _led_init
      0069h              _main
-     05ebh              _memset
+     05f4h              _memset
      00efh              _memset_2
      0002h              _other_init
      00b6h              _output_CB
@@ -113,13 +113,13 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0083h              _sys_arg
      0080h              _sys_clk
      0081h              _sys_cmd
-     024bh              _task_app
+     0254h              _task_app
      0103h              _task_buzzer
      00e4h              _task_debug
-     0363h              _task_key
-     048ah              _task_led
+     036ch              _task_key
+     0493h              _task_led
      01dch              _task_ntc_voltage
-     021ch              _task_run
+     0225h              _task_run
      00cbh              _time_blink
      0005h              _timebase_init
      00e8h              r110
@@ -169,28 +169,28 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0103h              _task_buzzer
      01bdh              _adc_conversion
      01dch              _task_ntc_voltage
-     021ch              _task_run
-     0229h              _TB0_ISR
-     024bh              _task_app
-     035ch              _key_init
-     0363h              _task_key
-     047dh              _led_init
-     048ah              _task_led
-     05e1h              __DELAYX6
-     05e2h              __DELAYX5
-     05e3h              __DELAYX4
-     05e4h              __DELAYX3
-     05e5h              __DELAYX2
-     05e6h              __DELAYX1
-     05e7h              __DELAYX0
-     05ebh              _memset
-     0612h              _Crom2PromNext
-     0613h              _Crom2Prom
+     0225h              _task_run
+     0232h              _TB0_ISR
+     0254h              _task_app
+     0365h              _key_init
+     036ch              _task_key
+     0486h              _led_init
+     0493h              _task_led
+     05eah              __DELAYX6
+     05ebh              __DELAYX5
+     05ech              __DELAYX4
+     05edh              __DELAYX3
+     05eeh              __DELAYX2
+     05efh              __DELAYX1
+     05f0h              __DELAYX0
+     05f4h              _memset
+     061bh              _Crom2PromNext
+     061ch              _Crom2Prom
 
 
 ROM Usage Statistics
      Size      Used     Percentage
-     1000h     0616h    38%
+     1000h     061fh    38%
 
 RAM Usage Statistics
      Size      Used     Percentage
