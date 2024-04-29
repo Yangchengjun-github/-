@@ -57,7 +57,8 @@ void task_debug(void)
         a = 0;
         UART_SoftWareSendByte(0xaa);
         UART_SoftWareSendByte(0x55);
-        UART_SoftWareSendByte(sys_arg.system_status);
+        UART_SoftWareSendByte(sys_arg.adc_result[CH_VOL] >> 8);
+        UART_SoftWareSendByte(sys_arg.adc_result[CH_VOL]);
     }
     
         

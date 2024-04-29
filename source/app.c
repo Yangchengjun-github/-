@@ -181,9 +181,9 @@ void task_app(void)
     
     }
 #ifdef LIMIT
-    if(sys_arg.limit_timer > 60*60*2)
+    if(sys_arg.limit_timer >=  65535)
     {
-        sys_arg.limit_timer = 60*60*2;
+        sys_arg.limit_timer = 65535;
         sys_cmd.cmd_powoff = 1;
     }
 #endif 
