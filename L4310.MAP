@@ -1,0 +1,237 @@
+
+连接器　版本8.8.0.230825
+Input Object File: c:\users\yang\desktop\zxw\l4310\code\STARTUP1.OBJ
+Input Object File: c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ
+Input Object File: c:\users\yang\desktop\zxw\l4310\code\HT8_SIMULATION_UART.OBJ
+Input Object File: c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ
+Input Object File: c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ
+Input Object File: c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ
+Input Object File: c:\users\yang\desktop\zxw\l4310\code\APP.OBJ
+Input Object File: c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ
+Input Object File: c:\users\yang\desktop\zxw\l4310\code\LED.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_srsc.lib
+
+
+     Start     End      Length     Class    AvgIns    Name
+     0000h     0000h    0001h      CODE               @code (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     0001h     0001h    0001h      CODE               @start (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     0002h     0004h    0003h      CODE               _other_init (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     0005h     000eh    000ah      CODE               _timebase_init (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     0010h     0013h    0004h      CODE               @TB0_ISR_code (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     0014h     0068h    0055h      CODE               @ROMDATA_BASE (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     0069h     00a6h    003eh      CODE               _main (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     00a7h     00bdh    0017h      CODE               _UART_SoftWareSendByte (c:\users\yang\desktop\zxw\l4310\code\HT8_SIMULATION_UART.OBJ)
+     00beh     00d7h    001ah      CODE               _buzzer_init (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
+     00d8h     00e3h    000ch      CODE               _adc_init (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     00e4h     00fdh    001ah      CODE               _task_debug (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     0100h     0102h    0003h      CODE               @crom (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     0103h     01bch    00bah      CODE               _task_buzzer (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
+     01bdh     01dbh    001fh      CODE               _adc_conversion (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     01dch     021bh    0040h      CODE               _task_ntc_voltage (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     021ch     0228h    000dh      CODE               _task_run (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     0229h     024ah    0022h      CODE               _TB0_ISR (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     024bh     035bh    0111h      CODE               _task_app (c:\users\yang\desktop\zxw\l4310\code\APP.OBJ)
+     035ch     0362h    0007h      CODE               _key_init (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
+     0363h     047ch    011ah      CODE               _task_key (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
+     047dh     0489h    000dh      CODE               _led_init (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
+     048ah     05e0h    0157h      CODE               _task_led (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
+     05e1h     05eah    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     05ebh     0611h    0027h      CODE               _memset (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_srsc.lib)
+     0612h     0618h    0007h      CODE               _CROM2PROM (CROM2PROM)
+     0080h     00d4h    0055h      DATA     2.2       @HCCINIT (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     00d5h     00dfh    000bh      DATA     0         @HCCINIT0 (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     00e0h     00e0h    0001h      DATA     43        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e1h     00e1h    0001h      DATA     91        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e2h     00e2h    0001h      DATA     79        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e3h     00e3h    0001h      DATA     80        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e4h     00e4h    0001h      DATA     57        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e5h     00e5h    0001h      DATA     27        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e6h     00e6h    0001h      DATA     20        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e7h     00e7h    0001h      DATA     14        @data_rh (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e8h     00e8h    0001h      DATA     2         @data_r110 (isr:ra~rh)
+     00e9h     00e9h    0001h      DATA     2         @data_r210 (isr:ra~rh)
+     00eah     00eah    0001h      DATA     6         @data_ra10 (isr:ra~rh)
+
+     Local Sections
+
+     Start     End      Length     Class    AvgIns    Name
+     00f3h     00f3h    0000h      LOCAL    0         @dummy (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     00f3h     00f3h    0000h      LOCAL    0         _main (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     00ebh     00eeh    0004h      LOCAL    2         _buzzer_init (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
+     00ebh     00ebh    0000h      LOCAL    0         _adc_init (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     00ebh     00ebh    0000h      LOCAL    0         _timebase_init (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     00ebh     00ebh    0000h      LOCAL    0         _led_init (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
+     00ebh     00ebh    0000h      LOCAL    0         _key_init (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
+     00ebh     00ebh    0000h      LOCAL    0         _other_init (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     00ebh     00f2h    0008h      LOCAL    4.875     _memset (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_srsc.lib)
+     00edh     00edh    0000h      LOCAL    0         _task_run (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     00ech     00ech    0000h      LOCAL    0         _task_debug (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     00ebh     00ebh    0001h      LOCAL    3         _UART_SoftWareSendByte (c:\users\yang\desktop\zxw\l4310\code\HT8_SIMULATION_UART.OBJ)
+     00ebh     00ebh    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00ech     00ech    0000h      LOCAL    0         _task_ntc_voltage (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     00ebh     00ebh    0001h      LOCAL    1         _adc_conversion (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     00ebh     00ech    0002h      LOCAL    13        _task_key (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
+     00ebh     00ebh    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00ebh     00ebh    0000h      LOCAL    0         _task_app (c:\users\yang\desktop\zxw\l4310\code\APP.OBJ)
+     00ebh     00ebh    0000h      LOCAL    0         _task_buzzer (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
+     00ebh     00ebh    0000h      LOCAL    0         _task_led (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
+     00ebh     00ebh    0000h      LOCAL    0         @dummy16 (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     00ebh     00ebh    0000h      LOCAL    0         _TB0_ISR (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     0613h              _Crom2Prom
+     0612h              _Crom2PromNext
+     0229h              _TB0_ISR
+     00a7h              _UART_SoftWareSendByte
+     05e7h              __DELAYX0
+     05e6h              __DELAYX1
+     05e5h              __DELAYX2
+     05e4h              __DELAYX3
+     05e3h              __DELAYX4
+     05e2h              __DELAYX5
+     05e1h              __DELAYX6
+     01bdh              _adc_conversion
+     00d8h              _adc_init
+     00cdh              _breath_CB
+     00beh              _buzzer_init
+     00ech              _buzzer_init_2
+     00b2h              _buzzer_status
+     00b9h              _cnt_10ms
+     00bah              _cnt_1ms
+     00bbh              _key_cb
+     035ch              _key_init
+     047dh              _led_init
+     0069h              _main
+     05ebh              _memset
+     00efh              _memset_2
+     0002h              _other_init
+     00b6h              _output_CB
+     0100h              _point_charging
+     0083h              _sys_arg
+     0080h              _sys_clk
+     0081h              _sys_cmd
+     024bh              _task_app
+     0103h              _task_buzzer
+     00e4h              _task_debug
+     0363h              _task_key
+     048ah              _task_led
+     01dch              _task_ntc_voltage
+     021ch              _task_run
+     00cbh              _time_blink
+     0005h              _timebase_init
+     00e8h              r110
+     00e9h              r210
+     00e0h              ra
+     00eah              ra10
+     00e1h              rb
+     00e2h              rc
+     00e3h              rd
+     00e4h              re
+     00e5h              rf
+     00e6h              rg
+     00e7h              rh
+
+     Address            Public by Value
+     0002h              _other_init
+     0005h              _timebase_init
+     0069h              _main
+     0080h              _sys_clk
+     0081h              _sys_cmd
+     0083h              _sys_arg
+     00a7h              _UART_SoftWareSendByte
+     00b2h              _buzzer_status
+     00b6h              _output_CB
+     00b9h              _cnt_10ms
+     00bah              _cnt_1ms
+     00bbh              _key_cb
+     00beh              _buzzer_init
+     00cbh              _time_blink
+     00cdh              _breath_CB
+     00d8h              _adc_init
+     00e0h              ra
+     00e1h              rb
+     00e2h              rc
+     00e3h              rd
+     00e4h              _task_debug
+     00e4h              re
+     00e5h              rf
+     00e6h              rg
+     00e7h              rh
+     00e8h              r110
+     00e9h              r210
+     00eah              ra10
+     00ech              _buzzer_init_2
+     00efh              _memset_2
+     0100h              _point_charging
+     0103h              _task_buzzer
+     01bdh              _adc_conversion
+     01dch              _task_ntc_voltage
+     021ch              _task_run
+     0229h              _TB0_ISR
+     024bh              _task_app
+     035ch              _key_init
+     0363h              _task_key
+     047dh              _led_init
+     048ah              _task_led
+     05e1h              __DELAYX6
+     05e2h              __DELAYX5
+     05e3h              __DELAYX4
+     05e4h              __DELAYX3
+     05e5h              __DELAYX2
+     05e6h              __DELAYX1
+     05e7h              __DELAYX0
+     05ebh              _memset
+     0612h              _Crom2PromNext
+     0613h              _Crom2Prom
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     1000h     0616h    38%
+
+RAM Usage Statistics
+     Size      Used     Percentage
+     0080h     0073h    89%
+
+Use Stack Count
+_main: 4
+_my_printf: 2
+_TB0_ISR: 0
+_breath: 1
+
+Call Tree
+    @dummy
+        _main (0)
+            _buzzer_init (1)
+            _adc_init (1)
+            _timebase_init (1)
+            _led_init (1)
+            _key_init (1)
+            _other_init (1)
+            _memset (1)
+            _task_run (1)
+                _task_debug (2)
+                    _UART_SoftWareSendByte (3)
+                        __DELAYX (4)
+                _task_ntc_voltage (2)
+                    _adc_conversion (3)
+                _task_key (2)
+                    _Crom2Prom (3)
+                _task_app (2)
+                _task_buzzer (2)
+                _task_led (2)
+    _my_printf
+        _UART_SoftWareSendByte (0)
+            __DELAYX (1)
+        _Crom2Prom (0)
+    @dummy16
+        _TB0_ISR (0)
+    _breath
+        _builtin_holtek_divmodhi4_isr00 (0)
+
+HLINK : 程序的开始执行点在程序段'@code'（地址0）。定义在'c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ' 文件中
+
+错误总数 : 0  警告总数 : 0

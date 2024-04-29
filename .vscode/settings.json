@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "*.c": "c",
+        "ht66f0181.h": "c",
+        "key.h": "c",
+        "main.h": "c",
+        "app.h": "c",
+        "task.h": "c",
+        "ht8_simulation_uart.h": "c",
+        "ht46r066b.h": "c",
+        "buzzer.h": "c",
+        "adc.h": "c",
+        "string.h": "c",
+        "STRING.H": "cpp"
+    },
+    "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
+        "clang-diagnostic-error"
+    ]
+}

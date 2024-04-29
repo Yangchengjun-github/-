@@ -1,0 +1,6 @@
+# Ignore all files in the directory except those in the source folder
+
+*.ASM
+*.OBJ
+*.LST
+
