@@ -20,79 +20,79 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0002h     0006h    0005h      CODE               _other_init (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
      0007h     000dh    0007h      CODE               _key_init (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
      0010h     0013h    0004h      CODE               @TB0_ISR_code (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
-     0014h     0066h    0053h      CODE               @ROMDATA_BASE (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
-     0067h     00aah    0044h      CODE               _main (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
-     00abh     00c6h    001ch      CODE               _buzzer_init (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
-     00c7h     00d2h    000ch      CODE               _adc_init (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
-     00d3h     00f1h    001fh      CODE               _adc_conversion (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
-     00f2h     00fbh    000ah      CODE               _timebase_init (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     0014h     0068h    0055h      CODE               @ROMDATA_BASE (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     0069h     00ach    0044h      CODE               _main (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     00adh     00c8h    001ch      CODE               _buzzer_init (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
+     00c9h     00d4h    000ch      CODE               _adc_init (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     00d5h     00f3h    001fh      CODE               _adc_conversion (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     00f4h     00fdh    000ah      CODE               _timebase_init (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
      0100h     0102h    0003h      CODE               @crom (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
      0103h     01bch    00bah      CODE               _task_buzzer (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
      01bdh     0205h    0049h      CODE               _task_ntc_voltage (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
      0206h     0211h    000ch      CODE               _task_run (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
      0212h     0233h    0022h      CODE               _TB0_ISR (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
-     0234h     033fh    010ch      CODE               _task_app (c:\users\yang\desktop\zxw\l4310\code\APP.OBJ)
-     0340h     0459h    011ah      CODE               _task_key (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
-     045ah     0466h    000dh      CODE               _led_init (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
-     0467h     05c0h    015ah      CODE               _task_led (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
-     05c1h     05e7h    0027h      CODE               _memset (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_srsc.lib)
-     05e8h     05eeh    0007h      CODE               _CROM2PROM (CROM2PROM)
-     0080h     00d2h    0053h      DATA     2.3614    @HCCINIT (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
-     00d3h     00dfh    000dh      DATA     0         @HCCINIT0 (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
-     00e0h     00e0h    0001h      DATA     46        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00e1h     00e1h    0001h      DATA     98        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00e2h     00e2h    0001h      DATA     86        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00e3h     00e3h    0001h      DATA     86        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00e4h     00e4h    0001h      DATA     63        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00e5h     00e5h    0001h      DATA     32        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00e6h     00e6h    0001h      DATA     24        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00e7h     00e7h    0001h      DATA     14        @data_rh (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00e8h     00e8h    0001h      DATA     2         @data_r110 (isr:ra~rh)
-     00e9h     00e9h    0001h      DATA     2         @data_r210 (isr:ra~rh)
-     00eah     00eah    0001h      DATA     6         @data_ra10 (isr:ra~rh)
+     0234h     035bh    0128h      CODE               _task_app (c:\users\yang\desktop\zxw\l4310\code\APP.OBJ)
+     035ch     0475h    011ah      CODE               _task_key (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
+     0476h     0482h    000dh      CODE               _led_init (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
+     0483h     05dch    015ah      CODE               _task_led (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
+     05ddh     0603h    0027h      CODE               _memset (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_srsc.lib)
+     0604h     060ah    0007h      CODE               _CROM2PROM (CROM2PROM)
+     0080h     00d4h    0055h      DATA     2.3412    @HCCINIT (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     00d5h     00e1h    000dh      DATA     0         @HCCINIT0 (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     00e2h     00e2h    0001h      DATA     46        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e3h     00e3h    0001h      DATA     98        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e4h     00e4h    0001h      DATA     86        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e5h     00e5h    0001h      DATA     89        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e6h     00e6h    0001h      DATA     66        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e7h     00e7h    0001h      DATA     32        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e8h     00e8h    0001h      DATA     24        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00e9h     00e9h    0001h      DATA     14        @data_rh (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00eah     00eah    0001h      DATA     2         @data_r110 (isr:ra~rh)
+     00ebh     00ebh    0001h      DATA     2         @data_r210 (isr:ra~rh)
+     00ech     00ech    0001h      DATA     6         @data_ra10 (isr:ra~rh)
 
      Local Sections
 
      Start     End      Length     Class    AvgIns    Name
-     00f3h     00f3h    0000h      LOCAL    0         @dummy (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
-     00f3h     00f3h    0000h      LOCAL    0         _main (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
-     00ebh     00eeh    0004h      LOCAL    2         _buzzer_init (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
-     00ebh     00ebh    0000h      LOCAL    0         _adc_init (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
-     00ebh     00ebh    0000h      LOCAL    0         _timebase_init (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
-     00ebh     00ebh    0000h      LOCAL    0         _led_init (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
-     00ebh     00ebh    0000h      LOCAL    0         _key_init (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
-     00ebh     00ebh    0000h      LOCAL    0         _other_init (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
-     00ebh     00f2h    0008h      LOCAL    4.875     _memset (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_srsc.lib)
-     00edh     00edh    0000h      LOCAL    0         _task_run (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
-     00ech     00ech    0000h      LOCAL    0         _task_ntc_voltage (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
-     00ebh     00ebh    0001h      LOCAL    1         _adc_conversion (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
-     00ebh     00ech    0002h      LOCAL    13        _task_key (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
-     00ebh     00ebh    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
-     00ebh     00ebh    0000h      LOCAL    0         _task_app (c:\users\yang\desktop\zxw\l4310\code\APP.OBJ)
-     00ebh     00ebh    0000h      LOCAL    0         _task_buzzer (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
-     00ebh     00ebh    0000h      LOCAL    0         _task_led (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
-     00ebh     00ebh    0000h      LOCAL    0         @dummy16 (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
-     00ebh     00ebh    0000h      LOCAL    0         _TB0_ISR (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     00f5h     00f5h    0000h      LOCAL    0         @dummy (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     00f5h     00f5h    0000h      LOCAL    0         _main (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     00edh     00f0h    0004h      LOCAL    2         _buzzer_init (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
+     00edh     00edh    0000h      LOCAL    0         _adc_init (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     00edh     00edh    0000h      LOCAL    0         _timebase_init (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     00edh     00edh    0000h      LOCAL    0         _led_init (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
+     00edh     00edh    0000h      LOCAL    0         _key_init (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
+     00edh     00edh    0000h      LOCAL    0         _other_init (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     00edh     00f4h    0008h      LOCAL    4.875     _memset (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_srsc.lib)
+     00efh     00efh    0000h      LOCAL    0         _task_run (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     00eeh     00eeh    0000h      LOCAL    0         _task_ntc_voltage (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     00edh     00edh    0001h      LOCAL    1         _adc_conversion (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     00edh     00eeh    0002h      LOCAL    13        _task_key (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
+     00edh     00edh    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00edh     00edh    0000h      LOCAL    0         _task_app (c:\users\yang\desktop\zxw\l4310\code\APP.OBJ)
+     00edh     00edh    0000h      LOCAL    0         _task_buzzer (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
+     00edh     00edh    0000h      LOCAL    0         _task_led (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
+     00edh     00edh    0000h      LOCAL    0         @dummy16 (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     00edh     00edh    0000h      LOCAL    0         _TB0_ISR (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
 
      Public Symbols Information
      Address            Public by Name
-     05e9h              _Crom2Prom
-     05e8h              _Crom2PromNext
+     0605h              _Crom2Prom
+     0604h              _Crom2PromNext
      0212h              _TB0_ISR
-     00d3h              _adc_conversion
-     00c7h              _adc_init
-     00cbh              _breath_CB
-     00abh              _buzzer_init
-     00ebh              _buzzer_init_2
+     00d5h              _adc_conversion
+     00c9h              _adc_init
+     00cdh              _breath_CB
+     00adh              _buzzer_init
+     00edh              _buzzer_init_2
      00b0h              _buzzer_status
      00b7h              _cnt_10ms
      00b8h              _cnt_1ms
-     00b9h              _key_cb
+     00bbh              _key_cb
      0007h              _key_init
-     045ah              _led_init
-     0067h              _main
-     05c1h              _memset
-     00efh              _memset_2
+     0476h              _led_init
+     0069h              _main
+     05ddh              _memset
+     00f1h              _memset_2
      0002h              _other_init
      00b4h              _output_CB
      0100h              _point_charging
@@ -101,76 +101,76 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0081h              _sys_cmd
      0234h              _task_app
      0103h              _task_buzzer
-     0340h              _task_key
-     0467h              _task_led
+     035ch              _task_key
+     0483h              _task_led
      01bdh              _task_ntc_voltage
      0206h              _task_run
-     00c9h              _time_blink
-     00f2h              _timebase_init
-     00e8h              r110
-     00e9h              r210
-     00e0h              ra
-     00eah              ra10
-     00e1h              rb
-     00e2h              rc
-     00e3h              rd
-     00e4h              re
-     00e5h              rf
-     00e6h              rg
-     00e7h              rh
+     00cbh              _time_blink
+     00f4h              _timebase_init
+     00eah              r110
+     00ebh              r210
+     00e2h              ra
+     00ech              ra10
+     00e3h              rb
+     00e4h              rc
+     00e5h              rd
+     00e6h              re
+     00e7h              rf
+     00e8h              rg
+     00e9h              rh
 
      Address            Public by Value
      0002h              _other_init
      0007h              _key_init
-     0067h              _main
+     0069h              _main
      0080h              _sys_clk
      0081h              _sys_cmd
      0083h              _sys_arg
-     00abh              _buzzer_init
+     00adh              _buzzer_init
      00b0h              _buzzer_status
      00b4h              _output_CB
      00b7h              _cnt_10ms
      00b8h              _cnt_1ms
-     00b9h              _key_cb
-     00c7h              _adc_init
-     00c9h              _time_blink
-     00cbh              _breath_CB
-     00d3h              _adc_conversion
-     00e0h              ra
-     00e1h              rb
-     00e2h              rc
-     00e3h              rd
-     00e4h              re
-     00e5h              rf
-     00e6h              rg
-     00e7h              rh
-     00e8h              r110
-     00e9h              r210
-     00eah              ra10
-     00ebh              _buzzer_init_2
-     00efh              _memset_2
-     00f2h              _timebase_init
+     00bbh              _key_cb
+     00c9h              _adc_init
+     00cbh              _time_blink
+     00cdh              _breath_CB
+     00d5h              _adc_conversion
+     00e2h              ra
+     00e3h              rb
+     00e4h              rc
+     00e5h              rd
+     00e6h              re
+     00e7h              rf
+     00e8h              rg
+     00e9h              rh
+     00eah              r110
+     00ebh              r210
+     00ech              ra10
+     00edh              _buzzer_init_2
+     00f1h              _memset_2
+     00f4h              _timebase_init
      0100h              _point_charging
      0103h              _task_buzzer
      01bdh              _task_ntc_voltage
      0206h              _task_run
      0212h              _TB0_ISR
      0234h              _task_app
-     0340h              _task_key
-     045ah              _led_init
-     0467h              _task_led
-     05c1h              _memset
-     05e8h              _Crom2PromNext
-     05e9h              _Crom2Prom
+     035ch              _task_key
+     0476h              _led_init
+     0483h              _task_led
+     05ddh              _memset
+     0604h              _Crom2PromNext
+     0605h              _Crom2Prom
 
 
 ROM Usage Statistics
      Size      Used     Percentage
-     1000h     05e9h    36%
+     1000h     0607h    37%
 
 RAM Usage Statistics
      Size      Used     Percentage
-     0080h     0073h    89%
+     0080h     0075h    91%
 
 Use Stack Count
 _main: 3

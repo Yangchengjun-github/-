@@ -3,6 +3,7 @@
 
 void task_app(void)
 {
+    static u16 timer_alarm = 0;
     
     /* ---------------------------------- 开机键长按 ---------------------------------- */
     if(key_cb[KEY_ONOFF].long_press)
@@ -122,7 +123,7 @@ void task_app(void)
             sys_arg.timer_autoShutdown = 0;
             sys_cmd.cmd_powoff = 1;        //自动关机
         }
-        if(sys_arg.timer_autoShutdown == 18*16)  //转红色闪烁
+        if(sys_arg.timer_autoShutdown == 18*60)  //转红色闪烁
         {
 
             sys_arg.run_step = step3;
@@ -134,6 +135,20 @@ void task_app(void)
         if (sys_arg.timer_autoShutdown < 3)
         {
             sys_arg.run_step = step1; 
+        }
+
+        if(sys_arg.run_step == step3)
+        {
+            timer_alarm++;
+            if(timer_alarm > 10000 /10)
+            {
+                timer_alarm = 0;
+                sys_cmd.cmd_beep_long = 1;
+            }
+        }
+        else
+        {
+            timer_alarm = 0;
         }
 
 
