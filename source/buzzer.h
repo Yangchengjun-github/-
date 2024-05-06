@@ -23,6 +23,7 @@ typedef enum
     BEEP_TWO,
     BEEP_THREE,
 } T_buzzer_status;
+extern T_buzzer_status buzzer_status;
 void task_buzzer(void);
 void buzzer_init(u16 ccra, u16 ccrp);
 #endif

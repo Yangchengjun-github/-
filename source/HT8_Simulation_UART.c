@@ -69,6 +69,33 @@ void my_printf(char *p)
   }
 }
 
+void my_printf_int(int num)
+{
+  char buffer[4]; // 假设整数最多20位
+  int index = 0;
+  int i = 0;
+  if (num == 0)
+  {
+    UART_SoftWareSendByte('0');
+    return;
+  }
 
+  if (num < 0)
+  {
+    UART_SoftWareSendByte('-');
+    num = -num;
+  }
+
+  while (num > 0)
+  {
+    buffer[index++] = num % 10 + '0';
+    num /= 10;
+  }
+   
+  for (i = index - 1; i >= 0; i--)
+  {
+    UART_SoftWareSendByte(buffer[i]);
+  }
+}
 
 /******************* (C) COPYRIGHT 2018 Holtek Semiconductor Inc *****END OF FILE****/

@@ -23,7 +23,7 @@ extern key_cb_T key_cb[KEY_NUM_MAX];
 
 enum
 {
-    KEY_ONOFF = 0,
+    KEY_ONOFF = 0,  
     KEY_PULSE,
     KEY_CONTINUE,
 
@@ -36,13 +36,13 @@ enum
         switch (i)     \
         {              \
         case 0:        \
-            io = _pa3; \
+            io = _pa5; \
             break;     \
         case 1:        \
             io = _pa6; \
             break;     \
         case 2:        \
-            io =_pa5;    \
+            io =_pa3;    \
             break;     \
         default:       \
             break;     \

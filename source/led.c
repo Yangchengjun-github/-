@@ -80,38 +80,40 @@ void task_led(void)
     switch (sys_arg.ui_led_mode)
     {
     case UI_LED_OFF:
-        LED1_ON;
-        LED2_OFF;
-        LED3_OFF;
-        LED4_OFF;
-        LED5_OFF;
-        LED6_OFF;
+        LED_RED_POW_ON;
+        LED_BLUE_POW_OFF;
+        LED_RED_CONT_OFF;
+        LED_BLUE_CONT_OFF;
+        LED_RED_PULSE_OFF;
+        LED_BLUE_PULSE_OFF;
+
+       
         break;
     case UI_LED_ALARM:
         timer++;
         if (timer == 1)
         {
-            LED1_ON;
+            LED_RED_POW_ON;
         }
         else if (timer == 15)
         {
-            LED1_OFF;
+            LED_RED_POW_OFF;
         }  
         else if (timer == 30)
         {
-            LED1_ON;
+            LED_RED_POW_ON;
         }
         else if (timer == 45)
         {
-            LED1_OFF;
+            LED_RED_POW_OFF;
         }
         else if (timer == 60)
         {
-            LED1_ON;
+            LED_RED_POW_ON;
         }
         else if (timer == 75)
         {
-            LED1_OFF;
+            LED_RED_POW_OFF;
             timer = 0;
             sys_arg.ui_led_mode = UI_LED_OFF;
         }
@@ -119,21 +121,22 @@ void task_led(void)
         break;
     case UI_LED_NORMAL: 
         timer_blink++;
+        LED_RED_POW_ON;
         switch(sys_arg.mode)
         {
         case MODE_CONTINUE:
-            LED3_OFF;
-            LED4_ON;
+            LED_RED_PULSE_OFF;
+            LED_BLUE_PULSE_OFF;
             switch (sys_arg.run_step)
             {
             case step1:
-                LED5_OFF;
+                LED_RED_CONT_OFF;
                 break;
             case step2:
-                LED6_OFF;
+                LED_BLUE_CONT_OFF;
                 break;
             case step3:
-                LED6_OFF;
+                LED_BLUE_CONT_OFF;
                 break;
             }
             if (timer_blink < 500 / 10)  
@@ -141,13 +144,13 @@ void task_led(void)
                 switch(sys_arg.run_step)
                 {
                     case step1:
-                        LED6_OFF;
+                        LED_BLUE_CONT_OFF;
                         break;
                     case step2:
-                        LED5_ON;
+                        LED_RED_CONT_ON;
                         break;
                     case step3:
-                        LED5_OFF;
+                        LED_RED_CONT_OFF;
                         break;
                 }
                 
@@ -157,11 +160,11 @@ void task_led(void)
                 switch (sys_arg.run_step)
                 {
                 case step1:
-                    LED6_ON;
+                    LED_BLUE_CONT_ON;
                     break;
                 case step2:
                 case step3:
-                    LED5_ON;
+                    LED_RED_CONT_ON;
                     break;
                 }
             }
@@ -171,22 +174,25 @@ void task_led(void)
             }
             break;
         case MODE_HALT:
-            LED4_ON;
-            LED6_ON;
+            LED_BLUE_CONT_ON;
+            LED_BLUE_PULSE_ON;
+
+            LED_RED_CONT_OFF;
+            LED_RED_PULSE_OFF;
             break;
         case MDDE_PULSED:
-            LED6_ON;
-            LED5_OFF;
+            LED_RED_CONT_OFF;
+            LED_BLUE_CONT_OFF;
             switch(sys_arg.run_step)
             {
                 case step1:
-                    LED3_OFF;
+                    LED_RED_PULSE_OFF;
                     break;
                 case step2:
-                    LED4_OFF;
+                    LED_BLUE_PULSE_OFF;
                     break;
                 case step3:
-                    LED4_OFF;
+                    LED_BLUE_PULSE_OFF;
                     break;
             }
             if(timer_blink < 500/10)
@@ -194,13 +200,13 @@ void task_led(void)
                 switch(sys_arg.run_step)
                 {
                     case step1:
-                        LED4_OFF;
+                        LED_BLUE_PULSE_OFF;
                         break;
                     case step2:
-                        LED3_ON;
+                        LED_RED_PULSE_ON;
                         break;
                     case step3:
-                        LED3_OFF;
+                        LED_RED_PULSE_OFF;
                         break;
                 }
             }
@@ -209,11 +215,11 @@ void task_led(void)
                 switch (sys_arg.run_step)
                 {
                 case step1:
-                    LED4_ON;
+                    LED_BLUE_PULSE_ON;
                     break;
                 case step2:
                 case step3:
-                    LED3_ON;
+                    LED_RED_PULSE_ON;
                     break;
                 }
             }
@@ -223,7 +229,6 @@ void task_led(void)
             }
             break;
         }
-        LED1_ON;
         break;
     default:
         break;

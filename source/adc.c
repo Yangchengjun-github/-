@@ -90,7 +90,9 @@ void task_ntc_voltage(void)
 {
  
     static unsigned char filter_ntc_err = 0;
+    #if (VOLTAFE_CHECK == 1)
     static unsigned char filter_voltage_err = 0;
+    #endif
 
     sys_arg.adc_result[CH_VOL] = adc_conversion(CH_VOL);
     sys_arg.adc_result[CH_TEM] = adc_conversion(CH_TEM);
@@ -119,7 +121,7 @@ void task_ntc_voltage(void)
         sys_arg.ntc_high = 0;
     }
 
-
+#if (VOLTAFE_CHECK == 1)
     if((sys_arg.adc_result[CH_VOL] > TH_VOLTAGE_HIGH) || (sys_arg.adc_result[CH_VOL] < TH_VOLTAGE_LOW))
     {
         filter_voltage_err++;
@@ -133,6 +135,6 @@ void task_ntc_voltage(void)
         filter_voltage_err = 0;
         sys_arg.voltage_err = 0;
     }
-
+#endif
    
 }

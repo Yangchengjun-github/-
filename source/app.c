@@ -3,6 +3,7 @@
 
 void task_app(void)
 {
+    
     /* ---------------------------------- 开机键长按 ---------------------------------- */
     if(key_cb[KEY_ONOFF].long_press)
     {
@@ -39,13 +40,14 @@ void task_app(void)
     {
         
         key_cb[KEY_CONTINUE].short_press = 0;
-        sys_cmd.cmd_beep_short1 = 1;
+        
         sys_cmd.cmd_cntdown_reset = 1;
         switch (sys_arg.system_status)
         {
         case SYSTEM_POWOFF:
             break;
         case SYSTEM_POWON:
+            sys_cmd.cmd_beep_short1 = 1;
             if(sys_arg.mode == MODE_CONTINUE)
             {
                 sys_arg.mode = MODE_HALT;
@@ -62,13 +64,14 @@ void task_app(void)
     {
         
         key_cb[KEY_PULSE].short_press = 0;
-        sys_cmd.cmd_beep_short1 = 1;
+        
         sys_cmd.cmd_cntdown_reset = 1;
         switch (sys_arg.system_status)
         {
         case SYSTEM_POWOFF:
             break;
         case SYSTEM_POWON:
+            sys_cmd.cmd_beep_short1 = 1;
             if(sys_arg.mode == MDDE_PULSED)
             {
                 sys_arg.mode = MODE_HALT;
@@ -130,7 +133,7 @@ void task_app(void)
         }
         if (sys_arg.timer_autoShutdown < 3)
         {
-            sys_arg.run_step = step1;
+            sys_arg.run_step = step1; 
         }
 
 
@@ -180,7 +183,7 @@ void task_app(void)
         break;
     
     }
-#ifdef LIMIT
+#if (LIMIT == 1)
     if(sys_arg.limit_timer >=  65535)
     {
         sys_arg.limit_timer = 65535;

@@ -34,7 +34,9 @@ void task_run(void)
     if (sys_clk.period_10ms)
     {
         sys_clk.period_10ms = 0;
+        #if (DEBUG == 1)
         task_debug();
+        #endif
         task_ntc_voltage();
         task_key();
         task_app();
@@ -55,10 +57,11 @@ void task_debug(void)
     if(a>=100)
     {
         a = 0;
-        UART_SoftWareSendByte(0xaa);
-        UART_SoftWareSendByte(0x55);
-        UART_SoftWareSendByte(sys_arg.adc_result[CH_VOL] >> 8);
-        UART_SoftWareSendByte(sys_arg.adc_result[CH_VOL]);
+       // my_printf_int(123);
+        // UART_SoftWareSendByte(0xaa);
+        // UART_SoftWareSendByte(0x55);
+        UART_SoftWareSendByte(sys_arg.timer_autoShutdown >> 8);
+        UART_SoftWareSendByte(sys_arg.timer_autoShutdown);
     }
     
         

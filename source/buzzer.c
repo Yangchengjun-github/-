@@ -2,8 +2,10 @@
 
 
 T_buzzer_status buzzer_status = BEEP_IDLE;
+static u16 beep_timer ;
 void buzzer_init(u16 ccra,u16 ccrp)
 {
+    beep_timer = 0;
     BEEP_OFF;
     _ptpau = 0;
     //fsys /4
@@ -43,33 +45,32 @@ void buzzer_init(u16 ccra,u16 ccrp)
 void task_buzzer(void)
 {
     
-    static u16 timer = 0;
-    static u16 timer_task = 0;
-    switch (buzzer_status)
+
+       
+   static u16 timer_task = 0;
+   #if 1
+
+    if (beep_timer > 0)
     {
-    case BEEP_THREE:
-        if (timer)
-        {
-            BEEP_LED_ON;
-            timer--;
-        }
-        else
-        {
-            BEEP_LED_OFF;
-        }
-        break;
-    default:
-        if (timer)
-        {
-            BEEP_ON;
-            timer--;
-        }
-        else
-        {
-            BEEP_OFF;
-        }
-        break;
+        BEEP_ON;
+        beep_timer--;
     }
+    else
+    {
+        BEEP_OFF;
+    }
+    #else
+      static u16 timer = 0;
+      if (timer > 0)
+      {
+          BEEP_ON;
+          timer--;
+      }
+      else
+      {
+          BEEP_OFF;
+      }
+#endif
 
     if (1 && sys_cmd.cmd_beep_long)
     {
@@ -77,7 +78,7 @@ void task_buzzer(void)
         BEEP_ON;
         buzzer_status = BEEP_LONG;
         
-        timer = 1000 / TIME_TASK_BUZZER_CALL;
+        beep_timer = 1000 / TIME_TASK_BUZZER_CALL;
     }
 
     if (1 && sys_cmd.cmd_beep_short1)
@@ -86,7 +87,7 @@ void task_buzzer(void)
         BEEP_ON;
         buzzer_status = BEEP_SHORT1;
         
-        timer = 150 / TIME_TASK_BUZZER_CALL;
+        beep_timer = 150 / TIME_TASK_BUZZER_CALL;
     }
 
     if (1 && sys_cmd.cmd_beep_short2)
@@ -94,7 +95,7 @@ void task_buzzer(void)
         sys_cmd.cmd_beep_short2 = 0;
         BEEP_ON;
         buzzer_status = BEEP_SHORT2;
-        timer = 300 / TIME_TASK_BUZZER_CALL;
+        beep_timer = 300 / TIME_TASK_BUZZER_CALL;
     }
 
     if (1 && sys_cmd.cmd_beep_short3)
@@ -103,7 +104,7 @@ void task_buzzer(void)
         sys_cmd.cmd_beep_short3 = 0;
         BEEP_ON;
         buzzer_status = BEEP_SHORT3;
-        timer = 450 / TIME_TASK_BUZZER_CALL;
+        beep_timer = 450 / TIME_TASK_BUZZER_CALL;
     }
 
     if (1 && sys_cmd.cmd_beep_two)
@@ -129,31 +130,32 @@ void task_buzzer(void)
     switch(buzzer_status)
     {
     case BEEP_IDLE:
-        timer = 0;
+        beep_timer = 0;
         break;
+        
     case BEEP_LONG:
     case BEEP_SHORT1:
     case BEEP_SHORT2:
     case BEEP_SHORT3:
-        if(timer == 0)
+        if(beep_timer == 0)
             buzzer_status = BEEP_IDLE;
         break;
     case BEEP_TWO:
         if(timer_task <= 150/TIME_TASK_BUZZER_CALL)
         {
-            timer = 1;
+            beep_timer = 1;
         }
         else if (timer_task <= 300 / TIME_TASK_BUZZER_CALL)
         {
-            timer = 0;
+            beep_timer = 0;
         }
         else if (timer_task <= 450/ TIME_TASK_BUZZER_CALL)
         {
-            timer = 1;
+            beep_timer = 1;
         }
         else
         {
-            timer = 0;
+            beep_timer = 0;
             buzzer_status = BEEP_IDLE;
         }
         break;
@@ -161,34 +163,37 @@ void task_buzzer(void)
         if (timer_task <= 150 / TIME_TASK_BUZZER_CALL)
         {
             BEEP_ON;
-            timer = 1;
+            beep_timer = 1;
         }
         else if (timer_task <= 300 / TIME_TASK_BUZZER_CALL)
         {
-            timer = 0;
+            beep_timer = 0;
         }
         else if (timer_task <= 450 / TIME_TASK_BUZZER_CALL)
         {
             BEEP_ON;
-            timer = 1;
+            beep_timer = 1;
         }
         else if (timer_task <= 600 / TIME_TASK_BUZZER_CALL)
         {
-            timer = 0;
+            beep_timer = 0;
         }
         else if (timer_task <= 750 / TIME_TASK_BUZZER_CALL)
         {
             BEEP_ON;
-            timer = 1;
+            beep_timer = 1;
         }
         else
         {
-            timer = 0;
+            beep_timer = 0;
             buzzer_status = BEEP_IDLE;
         }
         break;
+
     }
+
 }
+
 
 
 

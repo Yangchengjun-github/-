@@ -36,9 +36,9 @@
 /* simulation TX pin on pc0,if you want to select other pin,
  * just modify TXD,TXC,TXPU mapping to the pin witch you want.
  */
-	#define 	TXD		_pc1			//TX pin mapping on PC0	
-	#define 	TXC		_pcc1			//TX pin input/output control
-	#define 	TXPU	_pcpu1			//TX pin pull-high control
+	#define 	TXD		_pa2			//TX pin mapping on PC0	
+	#define 	TXC		_pac2		//TX pin input/output control
+	#define 	TXPU	_papu2			//TX pin pull-high control
 	#define		SIMULATION_UART_INIT()	TXD=1,TXC=0,TXPU=1	
 
 /**** select simulation uart baud for 8MHz system clock ****/	
@@ -50,6 +50,7 @@
 
 void	UART_SoftWareSendByte(unsigned char TxData);
 void  my_printf(char *p);
+void my_printf_int(int num);
 
 #endif
 
