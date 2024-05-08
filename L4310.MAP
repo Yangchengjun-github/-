@@ -21,11 +21,11 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0007h     000dh    0007h      CODE               _key_init (c:\users\yang\desktop\zxw\l4310\code\KEY.OBJ)
      0010h     0013h    0004h      CODE               @TB0_ISR_code (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
      0014h     0068h    0055h      CODE               @ROMDATA_BASE (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
-     0069h     00ach    0044h      CODE               _main (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
-     00adh     00c8h    001ch      CODE               _buzzer_init (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
-     00c9h     00d4h    000ch      CODE               _adc_init (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
-     00d5h     00f3h    001fh      CODE               _adc_conversion (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
-     00f4h     00fdh    000ah      CODE               _timebase_init (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
+     0069h     00a9h    0041h      CODE               _main (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     00aah     00c5h    001ch      CODE               _buzzer_init (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
+     00c6h     00d1h    000ch      CODE               _adc_init (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     00d2h     00f0h    001fh      CODE               _adc_conversion (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
+     00f1h     00fah    000ah      CODE               _timebase_init (c:\users\yang\desktop\zxw\l4310\code\TASK.OBJ)
      0100h     0102h    0003h      CODE               @crom (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
      0103h     01bch    00bah      CODE               _task_buzzer (c:\users\yang\desktop\zxw\l4310\code\BUZZER.OBJ)
      01bdh     0205h    0049h      CODE               _task_ntc_voltage (c:\users\yang\desktop\zxw\l4310\code\ADC.OBJ)
@@ -37,7 +37,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0483h     05dch    015ah      CODE               _task_led (c:\users\yang\desktop\zxw\l4310\code\LED.OBJ)
      05ddh     0603h    0027h      CODE               _memset (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_srsc.lib)
      0604h     060ah    0007h      CODE               _CROM2PROM (CROM2PROM)
-     0080h     00d4h    0055h      DATA     2.3412    @HCCINIT (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
+     0080h     00d4h    0055h      DATA     2.3176    @HCCINIT (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
      00d5h     00e1h    000dh      DATA     0         @HCCINIT0 (c:\users\yang\desktop\zxw\l4310\code\MAIN.OBJ)
      00e2h     00e2h    0001h      DATA     46        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00e3h     00e3h    0001h      DATA     98        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
@@ -79,10 +79,10 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0605h              _Crom2Prom
      0604h              _Crom2PromNext
      0212h              _TB0_ISR
-     00d5h              _adc_conversion
-     00c9h              _adc_init
+     00d2h              _adc_conversion
+     00c6h              _adc_init
      00cdh              _breath_CB
-     00adh              _buzzer_init
+     00aah              _buzzer_init
      00edh              _buzzer_init_2
      00b0h              _buzzer_status
      00b7h              _cnt_10ms
@@ -106,7 +106,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      01bdh              _task_ntc_voltage
      0206h              _task_run
      00cbh              _time_blink
-     00f4h              _timebase_init
+     00f1h              _timebase_init
      00eah              r110
      00ebh              r210
      00e2h              ra
@@ -126,16 +126,16 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0080h              _sys_clk
      0081h              _sys_cmd
      0083h              _sys_arg
-     00adh              _buzzer_init
+     00aah              _buzzer_init
      00b0h              _buzzer_status
      00b4h              _output_CB
      00b7h              _cnt_10ms
      00b8h              _cnt_1ms
      00bbh              _key_cb
-     00c9h              _adc_init
+     00c6h              _adc_init
      00cbh              _time_blink
      00cdh              _breath_CB
-     00d5h              _adc_conversion
+     00d2h              _adc_conversion
      00e2h              ra
      00e3h              rb
      00e4h              rc
@@ -148,8 +148,8 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      00ebh              r210
      00ech              ra10
      00edh              _buzzer_init_2
+     00f1h              _timebase_init
      00f1h              _memset_2
-     00f4h              _timebase_init
      0100h              _point_charging
      0103h              _task_buzzer
      01bdh              _task_ntc_voltage
@@ -166,7 +166,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
 
 ROM Usage Statistics
      Size      Used     Percentage
-     1000h     0607h    37%
+     1000h     0604h    37%
 
 RAM Usage Statistics
      Size      Used     Percentage

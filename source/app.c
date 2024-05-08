@@ -118,17 +118,17 @@ void task_app(void)
             sys_arg.timer_autoShutdown = 0;
         }
 
-        if(sys_arg.timer_autoShutdown == 20*60)  //TODO 疑似内存范围出错
+        if(sys_arg.timer_autoShutdown == (20*60 -30))  //TODO 疑似内存范围出错
         {
             sys_arg.timer_autoShutdown = 0;
             sys_cmd.cmd_powoff = 1;        //自动关机
         }
-        if(sys_arg.timer_autoShutdown == 18*60)  //转红色闪烁
+        if(sys_arg.timer_autoShutdown == (18*60 -30))  //转红色闪烁
         {
 
             sys_arg.run_step = step3;
         }
-        if (sys_arg.timer_autoShutdown == 17*60)  //转红色
+        if (sys_arg.timer_autoShutdown == (17*60 -30))  //转红色
         {
             sys_arg.run_step = step2;
         }

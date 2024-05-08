@@ -28,9 +28,8 @@ void main()
     memset(&sys_cmd, 0, sizeof(sys_cmd_T));
     memset(&sys_clk, 0, sizeof(sys_clk_T));
     memset(key_cb, 0, sizeof(key_cb));
-    sys_arg.system_status = SYSTEM_POWON;
-    sys_arg.mode =  MODE_HALT;
-    sys_cmd.cmd_ui_on = 1;
+    sys_arg.system_status = SYSTEM_POWOFF;
+    sys_cmd.cmd_ui_off = 1;
     buzzer_status = BEEP_IDLE;
     MOTOR_POWOFF;
     VALVE_POWOFF;
