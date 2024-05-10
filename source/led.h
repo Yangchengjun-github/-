@@ -12,8 +12,8 @@
 #define LED3_ON _pc2 = 0
 #define LED3_OFF _pc2 = 1
 
-#define LED4_ON _pa0 = 0
-#define LED4_OFF _pa0 = 1
+#define LED4_ON _pa4 = 0
+#define LED4_OFF _pa4 = 1
 
 #define LED5_ON _pa1 = 0
 #define LED5_OFF _pa1 = 1
@@ -53,6 +53,6 @@
 
 void task_led(void);
 void led_init(void);
-void breath(void);
+
 #endif
 

@@ -140,6 +140,12 @@ extern  sys_arg_T sys_arg;
 extern  sys_cmd_T sys_cmd;
 extern  sys_clk_T sys_clk;
 
-void var_init(void);
+
+
+void valve_off();
+
+void valve_out();
+
+void valve_out_pwm();
 #endif
 

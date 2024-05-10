@@ -4,7 +4,7 @@
 void task_app(void)
 {
     static u16 timer_alarm = 0;
-    
+    static u16 timer_motor = 0;
     /* ---------------------------------- 开机键长按 ---------------------------------- */
     if(key_cb[KEY_ONOFF].long_press)
     {
@@ -150,33 +150,64 @@ void task_app(void)
         {
             timer_alarm = 0;
         }
+        if( sys_arg.mode == MDDE_PULSED)
+        {
+            
+            
+            if(timer_motor == 2)
+            {
+                valve_out_pwm();
+
+            }
+            if(timer_motor == 27)
+            {
+                valve_off();
+            }
+            timer_motor++;
+            if(timer_motor >= 59)
+            {
+                timer_motor = 0;
+                valve_out();
+            }
+        }
+        else
+        {
+            timer_motor = 0;
+        }
+
+        if( sys_arg.mode == MODE_CONTINUE)
+        {
+            valve_out_pwm();
+        }
+        
 
 
         switch(sys_arg.mode)
         {
         case MODE_HALT:
+            valve_off();
             MOTOR_POWOFF;
-            VALVE_POWOFF;
+           // VALVE_POWOFF;
             break;
         case MODE_CONTINUE:
             MOTOR_POWON;
-            VALVE_POWON;
+          //  VALVE_POWON;
             break;
         case MDDE_PULSED:
             MOTOR_POWON;
-            sys_arg.timer_pulsed++;
-            if(sys_arg.timer_pulsed <= 500 / 10)
-            {
-                VALVE_POWON;
-            }
-            else if (sys_arg.timer_pulsed <= 1000 / 10)
-            {
-                VALVE_POWOFF;
-            }
-            else
-            {
-                sys_arg.timer_pulsed = 0;
-            }
+            // sys_arg.timer_pulsed++;
+            // if(sys_arg.timer_pulsed <= 500 / 10)
+            // {
+            //     VALVE_POWON;
+            // }
+            // else if (sys_arg.timer_pulsed <= 1000 / 10)
+            // {
+            //     VALVE_POWOFF;
+            // }
+            // else
+            // {
+            //     sys_arg.timer_pulsed = 0;
+            // }
             break;
         default:
             break;
@@ -190,6 +221,7 @@ void task_app(void)
 
         break;
     case SYSTEM_POWOFF:
+        valve_off();
         MOTOR_POWOFF;
         VALVE_POWOFF;
         sys_arg.mode = MODE_HALT;

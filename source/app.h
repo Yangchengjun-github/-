@@ -12,9 +12,9 @@ void task_app(void);
 #define MOTOR_POWOFF _pb2 = 0
 
 
-#define VALVE_STATUS _pa4
-#define VALVE_POWON _pa4 = 1
-#define VALVE_POWOFF _pa4 = 0
+#define VALVE_STATUS //_pa4
+#define VALVE_POWON //_pa4 = 1
+#define VALVE_POWOFF// _pa4 = 0
 
 #define LIMIT  1
 #define VOLTAFE_CHECK  1

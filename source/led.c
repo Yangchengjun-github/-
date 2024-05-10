@@ -1,29 +1,6 @@
 #include "led.h"
 
-struct
-{
-    unsigned int const period_breath;
-    unsigned int timer;
-    unsigned char output;
-    unsigned char dir;
-    enum
-    {
-        breath0 = 0,
-        breath1,
-        breath2,
-        breath3,
-        breath4,
 
-    } state;
-
-} breath_CB =
-    {
-        2500,
-        0,
-        0,
-        1,
-
-};
 
 unsigned int time_blink = 0;
 //10MS 任务
@@ -39,8 +16,8 @@ void led_init(void)
     _pc2 = 1;
     _pcc2 = 0;
     //LED4
-    _pa0 = 1;
-    _pac0 = 0;
+    _pa4 = 1;
+    _pac4 = 0;
     //LED5
     _pa1 = 1;
     _pac1 = 0;
@@ -236,85 +213,3 @@ void task_led(void)
 }
 
 
-void breath(void)
-{
-    if(breath_CB.state == breath0)
-    {
-        breath_CB.timer = 0;
-        return;
-    }
-    breath_CB.timer++;
-    if(breath_CB.timer >= 2500)//breath_CB.period_breath)
-    {
-        breath_CB.timer = 0;
-        breath_CB.dir = !breath_CB.dir;
-    }
-    if (breath_CB.timer % 15 > breath_CB.timer / 100 )
-    {
-        breath_CB.output = breath_CB.dir ? 1 : 0;
-    }
-    else
-    {
-        breath_CB.output = breath_CB.dir ? 0 : 1;
-    }
-    // if (breath_CB.output)
-    // {
-    //     LED1_ON;
-    // }
-    // else
-    // {
-    //     LED1_OFF;
-    // }
-    //     LED2_OFF;
-    //     LED3_OFF;
-    switch(breath_CB.state)
-    {
-    case breath1 :
-        if(breath_CB.output)
-        {
-            LED1_ON;
-        }
-        else
-        {
-            LED1_OFF;
-        }
-
-        LED2_OFF;
-        LED3_OFF;
-        break;
-    case breath2:
-        if (breath_CB.output)
-        {
-            LED2_ON;
-        }
-        else
-        {
-            LED2_OFF;
-        }
-
-        LED1_ON;
-        LED3_OFF;
-        break;
-    case breath3:
-        if (breath_CB.output)
-        {
-            LED3_ON;
-        }
-        else
-        {
-            LED3_OFF;
-        }
-
-        LED1_ON;
-        LED2_ON;
-        break;
-    case breath4:
-        LED1_ON;
-        LED2_ON;
-        LED3_ON;
-        break;
-    default :
-    	break;
-    }
-
-}

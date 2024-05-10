@@ -11,7 +11,8 @@
         "buzzer.h": "c",
         "adc.h": "c",
         "string.h": "c",
-        "STRING.H": "cpp"
+        "STRING.H": "cpp",
+        "led.h": "c"
     },
     "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
         "clang-diagnostic-error"
