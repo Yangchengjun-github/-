@@ -45,6 +45,7 @@ void main()
 
 void driver_init(u16 ccra, u16 ccrp)
 {
+    _pa0 = 0;
     //valve
     _stm1 = 1;
     _stm0 = 0;
@@ -80,6 +81,7 @@ void driver_init(u16 ccra, u16 ccrp)
     // motor
     _pbc2 = 0;
     _pb2 = 0;
+    _pa0 = 0;
 }
 
 void valve_off()

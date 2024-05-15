@@ -4,7 +4,8 @@
 void task_app(void)
 {
     static u16 timer_alarm = 0;
-    static u16 timer_motor = 0;
+    static u16 timer_pulse = 0;
+    static u16 timer_continue = 0;
     /* ---------------------------------- 开机键长按 ---------------------------------- */
     if(key_cb[KEY_ONOFF].long_press)
     {
@@ -153,31 +154,50 @@ void task_app(void)
         if( sys_arg.mode == MDDE_PULSED)
         {
             
-            
-            if(timer_motor == 2)
+            if(timer_pulse++ == 0)
+            {
+                valve_out();
+            }
+            if(timer_pulse == 3)
             {
                 valve_out_pwm();
 
             }
-            if(timer_motor == 27)
+            if(timer_pulse == 28)
             {
                 valve_off();
             }
-            timer_motor++;
-            if(timer_motor >= 59)
+            if(timer_pulse == 60)
             {
-                timer_motor = 0;
-                valve_out();
+                timer_pulse = 0;
             }
         }
         else
         {
-            timer_motor = 0;
+            timer_pulse = 0;
         }
 
         if( sys_arg.mode == MODE_CONTINUE)
         {
-            valve_out_pwm();
+            if (timer_continue++ == 0)
+            {
+                valve_out();
+            }
+            if (timer_continue == 7)
+            {
+                valve_out_pwm();
+                
+            }
+
+            if(timer_continue > 10)  //防止溢出
+            {
+                timer_continue = 10;
+            }
+            
+        }
+        else
+        {
+            timer_continue = 0;
         }
         
 
@@ -221,7 +241,8 @@ void task_app(void)
 
         break;
     case SYSTEM_POWOFF:
-        valve_off();
+        timer_pulse = 0;
+        timer_continue = 0;
         MOTOR_POWOFF;
         VALVE_POWOFF;
         sys_arg.mode = MODE_HALT;
