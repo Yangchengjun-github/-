@@ -82,6 +82,10 @@ void __attribute((interrupt(0x10))) TB0_ISR(void)
             sys_clk.period_1s = 1;
             sys_arg.timer_autoShutdown++;
             sys_arg.limit_timer++;
+            if(sys_arg.timer_disable)
+            {
+                sys_arg.timer_disable--;
+            }
         }
     }
       

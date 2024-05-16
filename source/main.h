@@ -55,6 +55,7 @@ typedef enum
     UI_LED_OFF = 0,
     UI_LED_NORMAL,
     UI_LED_ALARM,
+    UI_LED_ALARM_LONG,
 
    
 } ui_led_T;
@@ -86,6 +87,7 @@ typedef struct
     bat_percent_T bat_percent;
     unsigned int sleep_timer;
     unsigned long  timer_autoShutdown;
+    unsigned long  timer_disable;
     unsigned char heat_sw;
     unsigned char temperature_ok;
     unsigned long heat_timer;
@@ -119,11 +121,13 @@ typedef struct
     unsigned char cmd_beep_short3 : 1;
     unsigned char cmd_beep_two : 1;
     unsigned char cmd_beep_three : 1;
+    unsigned char cmd_beep_three_long : 1;
     unsigned char cmd_cntdown_reset : 1;
 
     unsigned char cmd_ui_off : 1;
     unsigned char cmd_ui_on : 1;   
     unsigned char cmd_ui_alarm : 1;
+    unsigned char cmd_ui_alarm_long : 1;
 
 } sys_cmd_T;
 

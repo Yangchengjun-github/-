@@ -20,7 +20,13 @@ void task_app(void)
         switch (sys_arg.system_status)
         {
         case SYSTEM_POWOFF:
-            if (sys_arg.ntc_err || sys_arg.ntc_high || sys_arg.voltage_err)
+           if( sys_arg.timer_disable != 0)
+            {
+                sys_cmd.cmd_powoff = 1;
+                sys_cmd.cmd_beep_three_long = 1;
+                sys_cmd.cmd_ui_alarm_long = 1;
+            }
+            else if (sys_arg.ntc_err || sys_arg.ntc_high || sys_arg.voltage_err)
             {
                 sys_cmd.cmd_powoff = 1;
                 sys_cmd.cmd_beep_three = 1;
@@ -91,7 +97,7 @@ void task_app(void)
     {
         sys_cmd.cmd_powoff = 0;
         sys_arg.temperature_ok = 0;
-        sys_arg.timer_autoShutdown = 0;
+        sys_cmd.cmd_cntdown_reset = 1;
         sys_arg.system_status = SYSTEM_POWOFF;
         sys_cmd.cmd_ui_off = 1;
         
@@ -99,7 +105,7 @@ void task_app(void)
     if (sys_cmd.cmd_powon)
     {
         sys_cmd.cmd_powon = 0;
-        sys_arg.timer_autoShutdown = 0;
+        sys_cmd.cmd_cntdown_reset = 1;
         sys_arg.system_status = SYSTEM_POWON;
         sys_cmd.cmd_ui_on = 1;
     }
@@ -122,6 +128,7 @@ void task_app(void)
         if(sys_arg.timer_autoShutdown == (20*60 -30))  //TODO 疑似内存范围出错
         {
             sys_arg.timer_autoShutdown = 0;
+            sys_arg.timer_disable = 60*5;
             sys_cmd.cmd_powoff = 1;        //自动关机
         }
         if(sys_arg.timer_autoShutdown == (18*60 -30))  //转红色闪烁

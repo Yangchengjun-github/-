@@ -112,7 +112,7 @@ void task_ntc_voltage(void)
         sys_arg.ntc_err = 0;
     }
 
-    if(sys_arg.adc_result[CH_TEM] < TH_TEMP_HIGH)
+    if(sys_arg.adc_result[CH_TEM] < (sys_arg.system_status == SYSTEM_POWON ?   TH_TEMP_HIGH : TH_TEMP_HIGH1))
     {
         sys_arg.ntc_high = 1;
     }

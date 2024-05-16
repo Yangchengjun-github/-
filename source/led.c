@@ -38,13 +38,19 @@ void task_led(void)
         sys_cmd.cmd_ui_alarm= 0;
         sys_arg.ui_led_mode = UI_LED_ALARM;
     }
+    if (sys_cmd.cmd_ui_alarm_long == 1)
+    {
+        timer = 0;
+        sys_cmd.cmd_ui_alarm_long = 0;
+        sys_arg.ui_led_mode = UI_LED_ALARM_LONG;
+    }
     if (sys_cmd.cmd_ui_on == 1)
     {
         timer = 0;
         sys_cmd.cmd_ui_on = 0;
         sys_arg.ui_led_mode = UI_LED_NORMAL;
     }
-    if (sys_cmd.cmd_ui_off == 1 && sys_arg.ui_led_mode != UI_LED_ALARM)
+    if (sys_cmd.cmd_ui_off == 1 && sys_arg.ui_led_mode != UI_LED_ALARM && sys_arg.ui_led_mode != UI_LED_ALARM_LONG)
     {
         timer = 0;
         sys_cmd.cmd_ui_off = 0;
@@ -90,7 +96,37 @@ void task_led(void)
         }
         else if (timer == 75)
         {
+           // LED_RED_POW_OFF;
+            timer = 0;
+            sys_arg.ui_led_mode = UI_LED_OFF;
+        }
+
+        break;
+    case UI_LED_ALARM_LONG:
+        timer++;
+        if (timer == 1)
+        {
+            LED_RED_POW_ON;
+        }
+        else if (timer == 30)
+        {
             LED_RED_POW_OFF;
+        }
+        else if (timer == 60)
+        {
+            LED_RED_POW_ON;
+        }
+        else if (timer == 90)
+        {
+            LED_RED_POW_OFF;
+        }
+        else if (timer == 120)
+        {
+            LED_RED_POW_ON;
+        }
+        else if (timer == 150)
+        {
+           // LED_RED_POW_OFF;
             timer = 0;
             sys_arg.ui_led_mode = UI_LED_OFF;
         }

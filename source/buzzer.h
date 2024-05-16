@@ -22,6 +22,7 @@ typedef enum
     BEEP_SHORT3,
     BEEP_TWO,
     BEEP_THREE,
+    BEEP_THREE_LONG,
 } T_buzzer_status;
 extern T_buzzer_status buzzer_status;
 void task_buzzer(void);

@@ -124,6 +124,14 @@ void task_buzzer(void)
         
         timer_task = 0;
     }
+    if( 1&& sys_cmd.cmd_beep_three_long)
+    {
+        sys_cmd.cmd_beep_three_long = 0;
+        BEEP_ON;
+        buzzer_status = BEEP_THREE_LONG;
+
+        timer_task = 0;
+    }
 
     timer_task++;
 
@@ -189,7 +197,36 @@ void task_buzzer(void)
             buzzer_status = BEEP_IDLE;
         }
         break;
-
+    case BEEP_THREE_LONG:
+        if (timer_task <= 300 / TIME_TASK_BUZZER_CALL)
+        {
+            BEEP_ON;
+            beep_timer = 1;
+        }
+        else if (timer_task <= 600 / TIME_TASK_BUZZER_CALL)
+        {
+            beep_timer = 0;
+        }
+        else if (timer_task <= 900 / TIME_TASK_BUZZER_CALL)
+        {
+            BEEP_ON;
+            beep_timer = 1;
+        }
+        else if (timer_task <= 1200 / TIME_TASK_BUZZER_CALL)
+        {
+            beep_timer = 0;
+        }
+        else if (timer_task <= 1500 / TIME_TASK_BUZZER_CALL)
+        {
+            BEEP_ON;
+            beep_timer = 1;
+        }
+        else
+        {
+            beep_timer = 0;
+            buzzer_status = BEEP_IDLE;
+        }
+        break;
     }
 
 }
