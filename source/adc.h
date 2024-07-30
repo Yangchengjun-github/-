@@ -3,8 +3,8 @@
 #include "main.h"
 
 //
-#define TH_TEMP_HIGH  148  //70°
-#define TH_TEMP_HIGH1  281   // 50°
+#define TH_TEMP_HIGH  148  //70°   184
+#define TH_TEMP_HIGH1  203   // 60°   
 #define TH_TEMP_LOW  
 #define TH_TEMP_SHORT (10)
 #define TH_TEMP_OPEN  (1000)
